@@ -1,0 +1,13 @@
+<h1>Country List</h1>
+
+<div class="container">
+    <label>Search Text</label><br>
+    <input type="email"  id="search-text"[(ngModel)]="searchText" placeholder="Enter text to search">
+ <div class="row">
+    <div class="col">
+        <ul *ngFor="let x of userdata  | appFilter: searchText " class="list-group" style="width: 50%;">
+            <li class="list-group-item" name="country" (click)="getState()">{{x.country.country_name}}</li>
+        </ul>
+    </div>
+</div>
+</div>
